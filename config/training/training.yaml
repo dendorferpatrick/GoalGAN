@@ -1,0 +1,51 @@
+# @package _global_
+num_workers : 8
+make_checkpoint: True
+data_augmentation: 1
+max_num: False
+skip: 20
+# trainer
+trainer:
+  max_epochs : 400
+  gpus : [1]
+  fast_dev_run: False
+
+
+batch_size: 32
+batch_size_scheduler: 10
+
+pretraining:
+  batch_size: 32
+  batch_size_scheduler: 10
+
+
+
+lr_scheduler_G : ReduceLROnPlateau
+lr_scheduler_D : ReduceLROnPlateau
+lr_scheduler_pretrain : ReduceLROnPlateau
+
+# training
+best_k : 10
+best_k_val : 10
+absolute : True
+
+# loss weights
+w_ADV : 1
+w_L2 : 5
+w_G : 0.5
+w_GCE : 1
+
+# learning rates
+lr_gen : 1e-3
+lr_dis : 1e-3
+lr_pretrain: 1e-2
+
+# generator/ discriminator train steps
+g_steps : 1
+d_steps : 1
+
+
+
+
+
+

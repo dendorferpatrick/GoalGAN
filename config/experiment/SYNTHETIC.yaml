@@ -1,0 +1,13 @@
+# @package _global_
+dataset_name : 'stanford_synthetic'
+obs_len : 8
+pred_len : 12
+random_seed : 1
+scaling_global: 1.
+scaling_local : 0.20
+img_scaling : 0.05
+grid_size_in_global: 16
+grid_size_out_global: 16
+grid_size_local : 16
+load_semantic_map: False
+pretrain : 4

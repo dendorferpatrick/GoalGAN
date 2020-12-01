@@ -1,0 +1,60 @@
+# @package _global_
+dropout: 0.0
+batch_norm: False
+input_dim: 2
+
+
+# Generator dim
+encoder_h_dim_g: 16
+decoder_h_dim_g: 16
+
+mlp_dim: 32
+embedding_dim: 8
+
+
+# parameters global goal / attention
+temperature_global: 1
+grid_size_in_global: 32
+grid_size_out_global: 32
+num_layers_cnn_global: 3
+batch_norm_cnn_global: True
+dropout_cnn_global: 0.3
+non_lin_cnn_global: "relu"
+
+force_hard_global: False
+noise_attention_dim_global: 8
+final_embedding_dim_global: 4
+skip_connection_global: True
+channels_cnn_global: 8
+global_vis_type: "goal"
+
+# parameters routing module
+rm_vis_type : "attention"
+num_layers_cnn_rm: 3
+batch_norm_cnn_rm : True
+dropout_cnn_rm : 0.0
+non_lin_cnn_rm : "relu"
+grid_size_local : 16
+
+force_hard_rm : True
+noise_attention_dim_rm : 8
+final_embedding_dim_rm : 4
+skip_connection_rm  : False
+channels_cnn_rm  : 4
+  
+
+# general args
+gan_mode : "lsgan"
+
+
+# discriminator params
+encoder_h_dim_d : 16
+
+dropout_disc : 0.3
+dropout_cnn_disc : 0.3
+
+non_lin_cnn_disc : "relu"
+channels_cnn_disc : 4
+num_layers_cnn_disc : 3
+batch_norm_disc : True
+visual_features_disc : True

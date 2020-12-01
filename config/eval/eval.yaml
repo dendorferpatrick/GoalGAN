@@ -1,0 +1,3 @@
+# @package _global_
+mode_dist_threshold: 2
+best_k_test : 20

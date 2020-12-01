@@ -1,0 +1,15 @@
+defaults:
+  - model : model.yaml
+  - training : training.yaml
+  - experiment : SYNTHETIC.yaml
+  - eval : eval.yaml
+
+
+general:
+  save_dir: logs
+  project_name: GoalGAN
+
+
+hydra:
+  run:
+    dir: ./logs
