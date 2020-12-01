@@ -1,0 +1,6 @@
+@inproceedings{dendorfer20accv, 
+title = {Goal-GAN: Multimodal Trajectory Prediction Based on Goal Position Estimation}, 
+author={Patrick Dendorfer and Aljo\v{s}a O\v{s}ep and Laura Leal-Taix{'e}}, 
+booktitle = {Asian Conference on Computer Vision (ACCV)}, 
+year = {2020}, 
+}
