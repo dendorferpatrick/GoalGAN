@@ -53,7 +53,7 @@ class TrajPredictor(pl.LightningModule):
 		if self.hparams.batch_size_scheduler:
 			self.batch_size = self.hparams.batch_size_scheduler
 		else:
-			self.batch_size = cfg.batch_size
+			self.batch_size = self.hparams.batch_size
 
 	"""########## DATE PREPARATION ##########"""
 	def setupData(self):
