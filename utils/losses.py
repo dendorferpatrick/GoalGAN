@@ -176,9 +176,9 @@ def displacement_error(pred_traj, pred_traj_gt, mode='sum'):
     
     loss = pred_traj_gt - pred_traj
 
+    loss = torch.norm(loss, 2, 2).unsqueeze(0)
     
     
-
     if mode == 'sum':
         return torch.sum(loss)
     elif mode == 'average': 
@@ -215,10 +215,9 @@ def final_displacement_error(
 
 def cal_l2_losses(
     pred_traj_gt, pred_traj_gt_rel, pred_traj_fake, pred_traj_fake_rel,
-    loss_mask
 ):
     g_l2_loss_abs = l2_loss(
-        pred_traj_fake, pred_traj_gt, loss_mask, mode='sum'
+        pred_traj_fake, pred_traj_gt, mode='sum'
     )
    
     return g_l2_loss_abs
@@ -226,16 +225,16 @@ def cal_l2_losses(
     
 
 
-def cal_ade(pred_traj_gt, pred_traj_fake, loss_mask = None,  mode = "sum"):
+def cal_ade(pred_traj_gt, pred_traj_fake, mode = "sum"):
 
-    ade = displacement_error(pred_traj_fake, pred_traj_gt, consider_ped = loss_mask , mode = mode)
+    ade = displacement_error(pred_traj_fake, pred_traj_gt, mode = mode)
 
     return ade
 
 
 def cal_fde(
-    pred_traj_gt, pred_traj_fake, loss_mask = None,  mode = "sum"):
-    fde = final_displacement_error(pred_traj_fake[-1], pred_traj_gt[-1], consider_ped = loss_mask ,  mode = mode )
+    pred_traj_gt, pred_traj_fake, mode = "sum"):
+    fde = final_displacement_error(pred_traj_fake[-1], pred_traj_gt[-1],  mode = mode )
     return fde
 
 
