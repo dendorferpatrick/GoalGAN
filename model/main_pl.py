@@ -280,7 +280,7 @@ class TrajPredictor(pl.LightningModule):
 										  out_dxdy=traj_fake_rel,
 										  images_patches=image_patches)
 
-		loss_adv = self.loss_weights["G"] * self.loss_fns["ADV"](fake_scores, True).clamp(min=0)
+		loss_adv = self.loss_weights["ADV"] * self.loss_fns["ADV"](fake_scores, True).clamp(min=0)
 
 		total_loss+=loss_adv
 		tqdm_dict["ADV_train"] = loss_adv
