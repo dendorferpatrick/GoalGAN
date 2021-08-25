@@ -213,7 +213,7 @@ Our extensive experimental evaluation shows that our method establishes a new st
           
 
           <hr>
-
+<!-- KEY IDEAS -->
 
           <center><h1>Key Ideas</h1></center>
         <p>
@@ -254,8 +254,9 @@ Our extensive experimental evaluation shows that our method establishes a new st
       </table>
                   <br>
                   </p>
-        <p> The two-stage prediction process allows us to compose the task of pedestrian trajectory prediction into two stages: <b>Stage 1:</b> The selects a intermediate goal position that the pedestrian wants to reach n the the scene.
-        <b>Stage 2:</b> The decoder of the model is conditioned on the sampled goal position and the pedestrian routes towards that goal.
+        <p> The two-stage prediction process allows us to compose the task of pedestrian trajectory prediction into two stages: 
+          <br><b>Stage 1:</b> The selects a intermediate goal position that the pedestrian wants to reach n the the scene.
+        <br><b>Stage 2:</b> The decoder of the model is conditioned on the sampled goal position and the pedestrian routes towards that goal.
 
         <hr>
     <table align=center width=900>
@@ -280,21 +281,14 @@ Our extensive experimental evaluation shows that our method establishes a new st
 
         <hr>
           <center><h1>Goal Module</h1></center>
-         <table align=center>
+          <center>
+          <img src = "images/goalgan_goalmodule.jpg" style="width:50%"/>
+        </center>
 
-          <tr class="spaceUnder">
-            <td>
-               <img src = "images/goalgan_goalmodule.jpg" style="height:50%"/>
-            </td>
-
-              <td>
-
-                  <p>The key idea of our work is the Goal Module. The Goal Module estimates a discrete probability distribution over the possible intermediate goal positions in the scene. To do so, the network combines the visual features of the scene with the encoded motion of the pedestrian and outputs a probability map.
-                      We sample discrete goal positions from the estimated probability distribution that are passed to the decoder.
-                      We use the Gumbel Softmax Trick to backpropagating the gradients of the final loss through the stochastic process.</p>
-                  </td>
-          </tr>
-         </table>
+        <p>The key idea of our work is the Goal Module. The Goal Module estimates a discrete probability distribution over the possible intermediate goal positions in the scene. To do so, the network combines the visual features of the scene with the encoded motion of the pedestrian and outputs a probability map.
+            We sample discrete goal positions from the estimated probability distribution that are passed to the decoder.
+            We use the Gumbel Softmax Trick to backpropagating the gradients of the final loss through the stochastic process.</p>
+    
 
 
         <hr>
@@ -421,10 +415,12 @@ the probability distribution over possible goal (target) positions,
             <table align=center width=950px>
                 <tr>
                     <td>
-                      <left>
-                <center><h1>Acknowledgements</h1></center>
-               This webpage was inspired by <a href="https://richzhang.github.io/colorization/">Colorful Image Colorization</a>.
-            </left>
+                      
+          <center><h1>Acknowledgements</h1></center>
+          <p>This project was funded by the Hum- boldt Foundation through the Sofja Kovalevskaja Award.
+          <br>This webpage was inspired by <a href="https://richzhang.github.io/colorization/">Colorful Image Colorization</a>.
+          </p>
+      
         </td>
         </tr>
         </table>
