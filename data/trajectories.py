@@ -928,6 +928,7 @@ class TrajectoryDataset(Dataset):
                 global_patch = torch.empty(1)
                 local_patch = torch.empty(1)
                 prob_mask =  torch.empty(1)
+        scene_img = (end - start) * [scene_img]
         return [obs_traj,
                 pred_traj,
                 obs_traj_rel,
